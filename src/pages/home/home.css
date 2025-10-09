@@ -1,0 +1,25 @@
+.top-header {
+	background-color: #82ae46;
+	color: #fff;
+	font-size: 0.7rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding-top: 10px;
+
+}
+#logo {
+	font-weight: 800;
+	font-size: 1.5rem;
+	color: green;
+}
+#logo:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+.introduction {
+	background-image: url('https://img.freepik.com/free-photo/overhead-view-fresh-vegetables-container-black-wooden-background_23-2147944290.jpg?semt=ais_hybrid&w=740&q=80');
+	background-size: cover;
+	background-position: center;
+	height: 85vh;
+}
