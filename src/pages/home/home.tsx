@@ -4,14 +4,20 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './home.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import { Button, Carousel, Col, Row, Image } from 'react-bootstrap';
+import ImageCarousel from '../../components/ImageCarousel/ImageCarousel';
+import TextCarouselCaption from '../../components/TextCarouselCaption/TextCarouselCaption';
 
 function Home(){
   return (
     <>
-    <Container fluid className='top-header justify-content-around d-flex'>
-      <p><li className='fa-solid fa-phone'/> + 1235 2355 98</p>
-      <p> <li className='fa-solid fa-envelope'/> vegefood@gmail.com</p>
-      <p> 3-5 Business days delivery & Free Returns</p>
+    <Container fluid className='top-header'>
+      <Row>
+      <Col xs={8} md={4}><li className='fa-solid fa-phone'/> + 1235 2355 98</Col>
+      <Col xs={8} md={4}> <li className='fa-solid fa-envelope'/> vegefood@gmail.com</Col>
+      <Col xs={8} md={4}> 3-5 Business days delivery & Free Returns</Col>
+      </Row>
+      
     </Container>
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container >
@@ -42,9 +48,27 @@ function Home(){
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    <Container fluid className='introduction d-flex justify-content-center align-items-center flex-column'>
+    <Carousel slide={false} controls={false} className='carousel'>
+      <Carousel.Item interval={5000} >
+        <ImageCarousel img='https://themewagon.github.io/vegefoods/images/bg_2.jpg'/>
+        <Carousel.Caption className='carousel-caption'>
+          <TextCarouselCaption title='First slide label' description='Nulla vitae elit libero, a pharetra augue mollis interdum.'  />
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item interval={5000}>
+        <ImageCarousel img="https://cdn.magicdecor.in/com/2023/11/15111201/Fresh-Vegetables-and-Fruits-Wallpaper-for-Wall.jpg" />
+        <Carousel.Caption className='carousel-caption'>
+           <TextCarouselCaption title='First slide label' description='Nulla vitae elit libero, a pharetra augue mollis interdum.'  />
+        </Carousel.Caption >
+      </Carousel.Item>
+      <Carousel.Item interval={5000}>
+        <ImageCarousel img="https://cdn.magicdecor.in/com/2022/10/30092027/1745969564.jpg" />
+        <Carousel.Caption className='carousel-caption'>
+           <TextCarouselCaption title='First slide label' description='Nulla vitae elit libero, a pharetra augue mollis interdum.'  />
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
 
-    </Container>
     </>
   );
 }
