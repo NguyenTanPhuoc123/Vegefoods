@@ -1,0 +1,9 @@
+#logo {
+	font-weight: 800;
+	font-size: 1.5rem;
+	color: #82ae46;
+}
+#logo:hover {
+	color: #000;
+	text-decoration: none;
+}
