@@ -1,6 +1,6 @@
 import { Carousel } from "react-bootstrap";
 import ImageCarousel from "../../../../components/ImageCarousel/ImageCarousel";
-import { SLIDE1, SLIDE2, SLIDE3 } from "../../../../constants/images";
+import { SLIDE1, SLIDE2 } from "../../../../constants/images";
 import TextCarouselCaption from "../../../../components/TextCarouselCaption/TextCarouselCaption";
 import "./Carousel.css";
 type TypeSLideCarousel = {
@@ -12,18 +12,13 @@ type TypeSLideCarousel = {
 const slideCarousels: TypeSLideCarousel[] = [
   {
     image: SLIDE1,
-    title: "First slide label",
-    description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    title: "100% Fresh & organic foods",
+    description: "We deliver organic vegetables & fruits",
   },
   {
     image: SLIDE2,
-    title: "Second slide label",
-    description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
-  },
-  {
-    image: SLIDE3,
-    title: "Third slide label",
-    description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    title: "We serve fresh vegetables & fruits",
+    description: "We deliver organic vegetables & fruits",
   },
 ];
 

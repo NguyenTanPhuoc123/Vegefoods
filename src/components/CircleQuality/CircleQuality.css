@@ -1,0 +1,11 @@
+#bg-circle-quality{
+    background-color: var(--bg-color);
+    border-radius: 50px;
+    width: max-content;
+    height: max-content;
+    padding: 15px;
+}
+.icon{
+    width: 75px;
+    height: 75px;
+}

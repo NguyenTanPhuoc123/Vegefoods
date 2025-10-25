@@ -24,7 +24,7 @@ const NavBar = ()=>{
             <Nav.Link href="#link">ABOUT</Nav.Link>
             <Nav.Link href="#link">BLOG</Nav.Link>
             <Nav.Link href="#link">CONTACT</Nav.Link>
-            <Nav.Link href="#link">
+            <Nav.Link id='cart' href="#link">
               <i className="fa-solid fa-shopping-cart"></i>
               [0]
             </Nav.Link>
