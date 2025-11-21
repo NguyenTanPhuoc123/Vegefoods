@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 
 export const TopHeader = ()=>{
     return (
-        <Container fluid className='top-header'>
+        <Container fluid className='top-header text-center'>
       <Row>
       <Col xs={8} md={4}><li className='fa-solid fa-phone'/> + 1235 2355 98</Col>
       <Col xs={8} md={4}> <li className='fa-solid fa-envelope'/> vegefood@gmail.com</Col>

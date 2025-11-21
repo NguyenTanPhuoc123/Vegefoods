@@ -12,11 +12,13 @@ type CircleQualityProps = {
 const CircleQuality = (props: CircleQualityProps) => {
     const {bgColor,title,description,icon} = props;
   return (
-    <Container>
+    <Container className='circle-quality'>
     <Container id='bg-circle-quality' style={{"--bg-color":bgColor} as React.CSSProperties }>
-        <Image src={icon} className='icon' />
+        <Container id='content-circle-quality'>
+        <Image className='icon' src={icon} alt='icon-circle-quality'/>
+        </Container>
     </Container>
-    <h2>{title}</h2>
+    <h6>{title}</h6>
     <p>{description}</p>
     </Container>
   )

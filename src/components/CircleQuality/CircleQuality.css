@@ -1,11 +1,45 @@
+.circle-quality{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px;
+    text-transform: uppercase;
+}
+
+.circle-quality p{
+    font-size: 12px;
+    font-weight: 500;
+    color: #6c757d;
+    margin: 0;
+}
+
 #bg-circle-quality{
     background-color: var(--bg-color);
-    border-radius: 50px;
+    border-radius: 70px;
     width: max-content;
     height: max-content;
     padding: 15px;
+    cursor: pointer;
 }
 .icon{
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
+}
+
+#content-circle-quality{
+    background-color:transparent;
+    border-radius:70px;
+    width: 80px;
+    height: 80px;
+    border: #f8f9fa 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bg-circle-quality:hover{
+    background-color: #82ae46;
+    transition: 0.3s;
 }

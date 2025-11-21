@@ -3,7 +3,7 @@ import './NavBar.css'
 
 const NavBar = ()=>{
     return (
-        <Navbar expand="lg" className="bg-body-tertiary">
+        <Navbar sticky='top' expand="lg" className="bg-body-tertiary">
       <Container >
         <Navbar.Brand href="#home" id='logo'>VEGEFOODS</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

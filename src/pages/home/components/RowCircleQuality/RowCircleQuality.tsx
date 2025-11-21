@@ -1,16 +1,45 @@
-import React from "react";
 import "./RowCircleQuality.css";
 import CircleQuality from "../../../../components/CircleQuality/CircleQuality";
-type Props = {};
+import { BADGE, DELIVER, SUPPORT, VEGETABLE } from "../../../../constants/images";
+import { Col, Row } from "react-bootstrap";
 
-const RowCircleQuality = (props: Props) => {
+
+const RowCircleQuality = () => {
   return (
+  <Row>
+    <Col>
     <CircleQuality
       bgColor="#e4b2d6"
       title="FREE SHIPPING"
       description="ON ORDER OVER $100"
-      icon="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO4LAA-YQFHVjW80tMufAT2GfzZacyfRh6zg&s"
+      icon={DELIVER}
     />
+    </Col>
+    <Col>
+    <CircleQuality
+      bgColor="#d3be7dff"
+      title="Always Fresh"
+      description="Product well package"
+      icon={VEGETABLE}
+    />
+    </Col>
+    <Col>
+    <CircleQuality
+      bgColor="#9acad0ff"
+      title="Superior Quality"
+      description="Quality Products"
+      icon={BADGE}
+    />
+    </Col>
+    <Col>
+    <CircleQuality
+      bgColor="#d5b75dff"
+      title="Support"
+      description="24/7 Support"
+      icon={SUPPORT}
+    />
+    </Col>
+    </Row>
   );
 };
 

@@ -1,7 +1,12 @@
-.caption{
-    color: #dfdbdb;
-    text-align: center;
-    text-transform: uppercase;
+.category{
+    height: max-content;
+    width: max-content;
+}
+
+.category-img {
+    width: 75%;
+    height: 75%;
+    border-radius: 10px;
 }
 
 #btn{
@@ -24,4 +29,22 @@
     font-weight: 600;
     border: 2px solid #82ae46;
     transition: 0.3s;
+}
+
+.title{
+    text-align: center;
+    color: #82ae46;
+}
+
+p{
+    text-align: center;
+    color: #6c757d;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+}
+.ctgr-img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
 }
