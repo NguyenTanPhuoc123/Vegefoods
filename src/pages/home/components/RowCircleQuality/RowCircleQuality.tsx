@@ -6,7 +6,7 @@ import { Col, Row } from "react-bootstrap";
 
 const RowCircleQuality = () => {
   return (
-  <Row>
+  <Row lg={4} sm={2}>
     <Col>
     <CircleQuality
       bgColor="#e4b2d6"

@@ -1,0 +1,33 @@
+.product-item{
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: max-content;
+    height: max-content;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.2s;
+}
+
+.product-img{
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-img:hover{
+    transform: scale(1.06);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.product-item:hover{
+    cursor: pointer;
+}
+.product-name{
+    text-transform: uppercase;
+}
+
+.product-price{
+    color: #28a745;
+
+}
