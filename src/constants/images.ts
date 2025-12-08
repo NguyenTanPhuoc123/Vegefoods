@@ -18,6 +18,14 @@ import PRODUCT_5 from "../assets/images/product-5.jpg";
 import PRODUCT_6 from "../assets/images/product-6.jpg";
 import PRODUCT_7 from "../assets/images/product-7.jpg";
 import PRODUCT_8 from "../assets/images/product-8.jpg";
+import PERSON_1 from "../assets/images/person_1.jpg";
+import PERSON_2 from "../assets/images/person_2.jpg";
+import PERSON_3 from "../assets/images/person_3.jpg";
+import PARTNER_1 from "../assets/images/partner-1.png";
+import PARTNER_2 from "../assets/images/partner-2.png";
+import PARTNER_3 from "../assets/images/partner-3.png";
+import PARTNER_4 from "../assets/images/partner-4.png";
+import PARTNER_5 from "../assets/images/partner-5.png";
 export {
   SLIDE1,
   SLIDE2,
@@ -39,4 +47,12 @@ export {
   PRODUCT_6,
   PRODUCT_7,
   PRODUCT_8,
+  PERSON_1,
+  PERSON_2,
+  PERSON_3,
+  PARTNER_1,
+  PARTNER_2,
+  PARTNER_3,
+  PARTNER_4,
+  PARTNER_5,
 };

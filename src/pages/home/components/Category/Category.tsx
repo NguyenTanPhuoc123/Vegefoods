@@ -37,7 +37,7 @@ const Category = () => {
         </Col>
         <Col lg className="category">
           <Image src={CATEGORY_4} className="category-img" />
-          <h4>Fruits</h4>
+          <h4>Dried</h4>
         </Col>
       </Row>
     </Container>

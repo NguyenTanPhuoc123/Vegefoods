@@ -5,6 +5,9 @@ import RowCircleQuality from './components/RowCircleQuality/RowCircleQuality';
 import Category from './components/Category/Category';
 import Products from './components/Products/Products';
 import Deal from './components/Deal/Deal';
+import Testimony from './components/Testimony/Testimony';
+import Partners from './components/Partners/Partners';
+import { Container } from 'react-bootstrap';
 
 function Home(){
 
@@ -17,6 +20,9 @@ function Home(){
     <Category/>
     <Products/>
     <Deal/>
+    <Testimony/>
+    <hr/>
+    <Partners/>
     </>
   );
 }

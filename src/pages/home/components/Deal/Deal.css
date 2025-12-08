@@ -3,12 +3,22 @@
     background-size: cover;
     background-position: center center;
     width: 100%;
-    height: 400px;
+    height: 420px;
+}
 
+@media screen and (max-width: 768px) {
+    .deal-section{
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../../../assets/images/deal-bg.jpg");
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 420px;
+    }
 }
 #content{
     width: 40%;
     height: max-content;
+    background-color: red;
 }
  .deal-section p:ntn-first-child {
     color: #28a745;
