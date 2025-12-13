@@ -1,0 +1,26 @@
+.subcribe-news{
+    background-color: #f1eded;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#subcribe-input{
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+#subscribe{
+    background-color: #82ae46;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}

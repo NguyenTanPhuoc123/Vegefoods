@@ -7,7 +7,9 @@ import Products from './components/Products/Products';
 import Deal from './components/Deal/Deal';
 import Testimony from './components/Testimony/Testimony';
 import Partners from './components/Partners/Partners';
-import { Container } from 'react-bootstrap';
+import SubcribeNews from './SubcribeNews/SubcribeNews';
+import Footer from '../../components/Footer/Footer';
+
 
 function Home(){
 
@@ -23,6 +25,8 @@ function Home(){
     <Testimony/>
     <hr/>
     <Partners/>
+    <SubcribeNews/>
+    <Footer/>
     </>
   );
 }
