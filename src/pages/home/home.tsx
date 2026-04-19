@@ -7,7 +7,7 @@ import Products from './components/Products/Products';
 import Deal from './components/Deal/Deal';
 import Testimony from './components/Testimony/Testimony';
 import Partners from './components/Partners/Partners';
-import SubcribeNews from './SubcribeNews/SubcribeNews';
+import SubcribeNews from './components/SubcribeNews/SubcribeNews';
 import Footer from '../../components/Footer/Footer';
 
 

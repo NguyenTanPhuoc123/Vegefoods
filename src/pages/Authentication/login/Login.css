@@ -1,0 +1,147 @@
+/* Container bao quanh toàn bộ màn hình */
+.login-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Khối đăng ký chính */
+.login-card {
+  background: white;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 12px;
+  overflow: hidden; /* Giúp hình ảnh bo góc theo cha */
+}
+
+/* Xử lý hình ảnh tràn lấp đầy cột */
+.image-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.side-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Quan trọng: Hình sẽ lấp đầy diện tích mà không bị méo */
+  display: block;
+}
+
+/* Cột chứa Form */
+.form-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 60px;
+}
+
+#logo {
+  color: #82ae46;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.welcome-text {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.sub-text {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+/* Input Styles */
+.input-field-group {
+  margin-bottom: 15px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-login {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-login:focus {
+  border-color: #82ae46;
+}
+
+.input-login.is-invalid {
+  border-color: #dc3545;
+}
+
+/* Icon dấu chấm than lỗi */
+.error-icon {
+  position: absolute;
+  right: 15px;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* Button Styles */
+#btn-login {
+  background-color: #82ae46;
+  border: none;
+  border-radius: 30px;
+  padding: 12px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#btn-login:hover {
+  background-color: #6d923a;
+}
+
+.register-text {
+  margin-top: 25px;
+  color: #999;
+}
+
+.register-text a {
+  color: #82ae46;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Alert cố định */
+.alert-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* Responsive cho Mobile */
+@media (max-width: 768px) {
+  .form-column {
+    padding: 30px 20px;
+  }
+}

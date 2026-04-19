@@ -1,0 +1,169 @@
+/* Container bao quanh toàn bộ màn hình */
+.register-page {
+  height: 100vh;
+  overflow: hidden; /* Chặn hoàn toàn scroll nếu nội dung vừa đủ */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Khối đăng ký chính */
+.register-card {
+  background: white;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 12px;
+  overflow: hidden; /* Giúp hình ảnh bo góc theo cha */
+}
+
+/* Xử lý hình ảnh tràn lấp đầy cột */
+.image-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.side-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Quan trọng: Hình sẽ lấp đầy diện tích mà không bị méo */
+  display: block;
+}
+
+/* Cột chứa Form */
+.form-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 60px;
+}
+
+#logo {
+  color: #82ae46;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.welcome-text {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.sub-text {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+/* Input Styles */
+.input-field-group {
+  margin-bottom: 15px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-register {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-register:focus {
+  border-color: #82ae46;
+}
+
+.input-register.is-invalid {
+  border-color: #dc3545;
+}
+
+/* Icon dấu chấm than lỗi */
+.error-icon {
+  position: absolute;
+  right: 15px;
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 5px;
+  text-align: left;
+}
+
+/* Button Styles */
+#btn-register {
+  background-color: #82ae46;
+  border: none;
+  border-radius: 30px;
+  padding: 12px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#btn-register:hover {
+  background-color: #6d923a;
+}
+
+.signin-text {
+  margin-top: 25px;
+  color: #999;
+}
+
+.signin-text a {
+  color: #82ae46;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Alert bay lơ lửng, không chiếm diện tích của trang */
+.register-page .alert.alert-fixed {
+  position: fixed !important; /* Cố định so với màn hình */
+  bottom: 20px !important;    /* Cách mép dưới màn hình 20px */
+  left: 20px !important;      /* Cách mép trái màn hình 20px */
+  
+  /* Đảm bảo không bị các thành phần khác đè lên */
+  z-index: 9999 !important;   
+  
+  /* Giới hạn kích thước để không bị tràn */
+  width: auto !important;
+  min-width: 250px;
+  max-width: 350px;
+  
+  /* Đổ bóng để nổi bật trên nền trắng */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
+  margin: 0 !important;
+}
+
+/* Ẩn Alert khi không có nội dung để tránh chiếm diện tích ảo */
+.alert:not(.show) {
+  display: none !important;
+}
+
+/* Responsive cho Mobile */
+@media (max-width: 768px) {
+  .form-column {
+    padding: 30px 20px;
+  }
+  .alert-fixed {
+    left: 10px;
+    bottom: 10px;
+    right: 10px; /* Trên mobile nhỏ, cho nó rộng ra một chút */
+    max-width: none;
+  }
+  
+}
