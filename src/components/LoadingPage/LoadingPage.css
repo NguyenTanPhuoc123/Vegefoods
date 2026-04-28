@@ -3,8 +3,7 @@
   top: 0;
   left: 0;
   width: 100vw; /* Phủ kín chiều ngang */
-  height: 100vh; /* Phủ kín chiều dọc */
-  background-color: rgba(255, 255, 255, 0.7); /* Nền mờ để thấy nội dung phía dưới nhưng không bấm được */
+  height: 100vh; /* Phủ kín chiều dọc */ /* Nền mờ để thấy nội dung phía dưới nhưng không bấm được */
   display: flex;
   justify-content: center; /* Căn giữa ngang */
   align-items: center; /* Căn giữa dọc */

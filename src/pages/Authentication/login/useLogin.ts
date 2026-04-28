@@ -9,10 +9,12 @@ import { useForm } from "react-hook-form";
 import { validationSchema } from "./validation";
 import { yupResolver } from "@hookform/resolvers/yup";
 import NavigationActionService from "../../../loading/loading";
+import { useToast } from "../../../components/ToastContext/ToastContext";
 const useLogin = () => {
   const dispatch = useDispatch();
   const usernameRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
+  const {showToast} = useToast();
   const initValue = { username: "", password: "" };
   const {
     control,
@@ -23,11 +25,8 @@ const useLogin = () => {
     mode: "onChange",
     resolver: yupResolver(validationSchema),
   });
-  const [isShow, setIsShow] = useState(false);
-  const [contentAlert, setContentAlert] = useState("");
-  const [variantAlert, setVariantAlert] = useState<"success" | "danger">(
-    "success",
-  );
+
+  
   const navigate = useNavigate();
 
   const onFocusUsername = () => {
@@ -40,17 +39,13 @@ const useLogin = () => {
 
   const onLoginSuccess = (result?: ApiResponse) => {
     NavigationActionService.hideLoading();
-    setVariantAlert("success");
-    setContentAlert(result?.message || "Login successfully");
-    setIsShow(true);
+    showToast(result?.message || "Login successfully", "success");
     navigate("/");
   };
 
   const onLoginFailed = (error?: ApiError) => {
     NavigationActionService.hideLoading();
-    setVariantAlert("danger");
-    setContentAlert(error?.message || "Have error in login");
-    setIsShow(true);
+    showToast(error?.message || "Have error in login", "danger");
   };
 
   const onLogin = handleSubmit((value: ILoginFormValues) => {
@@ -71,13 +66,9 @@ const useLogin = () => {
   return {
     usernameRef,
     passwordRef,
-    isShow,
-    contentAlert,
     onFocusUsername,
     onFocusPassword,
     onLogin,
-    setIsShow,
-    variantAlert,
     control,
     errors,
   };

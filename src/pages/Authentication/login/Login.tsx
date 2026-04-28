@@ -6,15 +6,11 @@ import { Controller } from "react-hook-form";
 
 const Login = () => {
   const {
-    isShow,
-    setIsShow,
     onLogin,
     control,
     errors,
     usernameRef,
     passwordRef,
-    contentAlert,
-    variantAlert,
   } = useLogin();
 
   return (
@@ -92,16 +88,6 @@ const Login = () => {
           </Col>
         </Row>
       </div>
-
-      <Alert
-        variant={variantAlert}
-        className="alert-fixed"
-        show={isShow}
-        onClose={() => setIsShow(false)}
-        dismissible
-      >
-        {contentAlert}
-      </Alert>
     </Container>
   );
 };

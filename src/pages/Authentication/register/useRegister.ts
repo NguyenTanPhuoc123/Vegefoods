@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import { validationSchema } from "./validation";
 import { yupResolver } from "@hookform/resolvers/yup";
 import NavigationActionService from "../../../loading/loading";
+import { useToast } from "../../../components/ToastContext/ToastContext";
 const useRegister = () => {
   const dispatch = useDispatch();
   const usernameRef = useRef<HTMLInputElement>(null);
@@ -24,11 +25,7 @@ const useRegister = () => {
     mode: "onChange",
     resolver: yupResolver(validationSchema),
   });
-  const [isShow, setIsShow] = useState(false);
-  const [contentAlert, setContentAlert] = useState("");
-  const [variantAlert, setVariantAlert] = useState<"success" | "danger">(
-    "success",
-  );
+  const { showToast } = useToast();
   const navigate = useNavigate();
 
   const onFocusUsername = () => {
@@ -44,19 +41,13 @@ const useRegister = () => {
 
   const onRegisterSuccess = (result?: ApiResponse) => {
     NavigationActionService.hideLoading();
-    setVariantAlert("success");
-    setContentAlert(result?.message || "Register successfully");
-    setIsShow(true);
+    showToast(result?.message || "Register successfully", "success");
     navigate("/login");
   };
 
   const onRegisterFailed = (error?: ApiError) => {
     NavigationActionService.hideLoading();
-    setVariantAlert("danger");
-    setContentAlert(
-      error?.message || "Password and confirm password do not match",
-    );
-    setIsShow(true);
+    showToast(error?.message || "Register failed", "danger");
   };
 
   const onRegister = handleSubmit((value: IRegisterFormValues) => {
@@ -79,14 +70,10 @@ const useRegister = () => {
     usernameRef,
     passwordRef,
     confirmPasswordRef,
-    isShow,
-    contentAlert,
     onFocusUsername,
     onFocusPassword,
     onFocusConfirmPassword,
     onRegister,
-    setIsShow,
-    variantAlert,
     control,
     errors,
   };
